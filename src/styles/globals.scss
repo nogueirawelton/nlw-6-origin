@@ -26,13 +26,13 @@ section {
   padding: 5rem 0;
 }
 
-h1 {
-  font: 700 1.875rem 'Poppins', sans-serif;
-}
-
 img {
   max-width: 100%;
   display: block;
+}
+
+ul {
+  list-style: none;
 }
 
 a {
@@ -43,6 +43,12 @@ a {
 
 .container {
   padding: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 .button {
@@ -60,6 +66,13 @@ a {
     background-color: var(--base-color-alt);
   }
 }
+
+.title {
+  font: 700 1.875rem 'Poppins', sans-serif;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+
 
 .divider-1 {
   height: 1px;
@@ -88,13 +101,13 @@ a {
   top: 0;
   left: 0;
   z-index: 100;
-  .header__container__nav {
+  .header__nav {
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .header__container__nav__logo {
+    .header__nav__logo {
       font: 700 1.31rem 'Poppins', sans-serif;
       color: var(--title-color);
 
@@ -103,16 +116,67 @@ a {
         color: var(--base-color)
       }
     }
+    .header__nav__menu {
+      opacity: 0;
+      visibility: hidden;
+      display: grid;
+      place-content: center;
+
+      &.header__nav__menu--active {
+        opacity: 1;
+        visibility: visible;
+        background-color: var(--body-color);
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+ 
+      ul {
+        display: grid;
+        gap: 4rem;
+        li {
+          text-align: center;
+          }
+        }
+      }
+
+
+      ul li a {
+        transition: color .3s;
+        position: relative;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 0%;
+          height: 2px;
+          background-color: var(--base-color);
+          position: absolute;
+          bottom: -.625rem;
+          left: 0;
+          transition: width .3s;
+        }
+
+        &:hover{
+          color: var(--base-color);
+          &::after {
+            width: 100%;
+          }
+        }          
+      }
+    }
   }
 }
 
 #home {
+  overflow: hidden;
   .home__image {
     position: relative;
-    width: fit-content;
-    margin-bottom: 1.5rem;
     
     img {
+      width: 100%;
       margin-left: -1.5rem;
       border-radius: .25rem;
     }
@@ -120,10 +184,10 @@ a {
       content: '';
       width: 100%;
       height: 100%;
-      background: var(--base-color);
+      background: var(--base-color-second);
       position: absolute;
       top: -16.8%;
-      left: 6.3%;
+      left: 16.7%;
       z-index: -1;
       border-radius: .25rem;
     }
