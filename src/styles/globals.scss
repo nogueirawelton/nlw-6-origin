@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 400 1rem 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --header-height: 4.5rem;
+  --hue: 159;
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+}
+
+main {
+  margin-top: var(--header-height);
+}
+
+section {
+  padding: 5rem 0;
+}
+
+h1 {
+  font: 700 1.875rem 'Poppins', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+.container {
+  padding: 0 1.5rem;
+}
+
+.button {
+  display: inline-flex;
+  background-color: var(--base-color);
+  color: var(--text-color-light);
+  font-weight: 500;
+  align-items: center;
+  height: 3.5rem;
+  padding: 0 2rem;
+  border-radius: .25rem;
+  transition: background .3s;
+
+  &:hover {
+    background-color: var(--base-color-alt);
+  }
+}
+
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1),
+    hsla(var(--hue), 65%, 88%, 0.34)
+  );
+}
+
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 65%, 88%, 0.34),
+    hsla(var(--hue), 36%, 57%, 1)
+  );
+}
+
+#header {
+  border-bottom: 1px solid #e4e4e4;
+  overflow: hidden;
+  background-color: var(--body-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  .header__container__nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__container__nav__logo {
+      font: 700 1.31rem 'Poppins', sans-serif;
+      color: var(--title-color);
+
+      & > span {
+        font: inherit;
+        color: var(--base-color)
+      }
+    }
+  }
+}
+
+#home {
+  .home__image {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 1.5rem;
+    
+    img {
+      margin-left: -1.5rem;
+      border-radius: .25rem;
+    }
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: var(--base-color);
+      position: absolute;
+      top: -16.8%;
+      left: calc(16.8% - 2.1rem);
+      z-index: -1;
+      border-radius: .25rem;
+    }
+  }
+  .home__text {
+    text-align: center;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+}
