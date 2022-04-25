@@ -8,15 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-  <script src="./js/main.js"></script>
+  <link rel="stylesheet" href="./assets/icons/icons.css">
+  <script src="./js/main.js" defer></script>
   <title>NLW 6 - Origin</title>
 </head>
 
 <body>
   <header id="header">
     <nav class="header__nav container">
-      <a href="#" class="header__nav__logo">beauty<span>salon</span>.</a>
-      <div class="header__nav__menu ">
+      <a href="#" class="header__nav__logo">beautysalon.</a>
+      <div data-menu="menu" class="header__nav__menu">
         <ul>
           <li><a class="title" href="#home">Início</a></li>
           <li><a class="title" href="#about">Sobre</a></li>
@@ -25,13 +26,17 @@
           <li><a class="title" href="#contact">Contato</a></li>
         </ul>
       </div>
+      <div class="header__nav__buttons">
+        <div data-menu="button" class="toggle icon-close"></div>
+        <div data-menu="button" class="toggle icon-menu"></div>
+      </div>
     </nav>
   </header>
   <main>
     <section id="home">
       <div class="container grid">
         <div class="home__image">
-          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mulher sorrindo penteando outra mulher">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mulher Sorrindo Penteando Outra Mulher">
         </div>
         <div class="home__text">
           <h1 class="title">Saúde natural para os seus cabelos</h1>
@@ -45,11 +50,47 @@
     </section>
     <div class="divider-1"></div>
     <section id="about">
-      <div class="container">
-
+      <div class="container grid">
+        <div class="about__image">
+          <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="3 Mulheres Sorrindo" />
+        </div>
+        <div class="about__text">
+          <h2 class="title">Sobre nós</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque officiis laboriosam temporibus molestiae, rerum totam sunt fugiat eligendi, error modi nam sequi laudantium quisquam optio ut quam. Est, natus dolores.</p>
+          <p>Quidem excepturi totam inventore veniam, explicabo unde voluptates cum fuga vero esse ducimus quos iste, a eos enim quod iure distinctio? Deleniti ipsum atque modi quod, reprehenderit adipisci quibusdam. Corrupti!</p>
+          <p>Reprehenderit, animi, numquam nihil error eos veritatis ratione assumenda, voluptates asperiores vero nobis laboriosam odio commodi nostrum qui nulla minus itaque tempore. Omnis possimus aut asperiores dignissimos illo laudantium ea!</p>
+          <p>Voluptatem possimus distinctio suscipit laborum corporis? Nemo suscipit iure quia quae a, voluptatibus nihil. Alias vero, voluptates dolore iste sed laudantium facere id fugit nostrum iure eum sequi, a praesentium.</p>
+        </div>
       </div>
     </section>
-    <section></section>
+    <div class="divider-2"></div>
+    <section id="services">
+      <div class="container grid">
+        <header>
+          <h2 class="title">Serviços</h2>
+          <p>Com mais de 10 anos no mercado, o <strong>Beautysalon</strong> já
+            conquistou clientes de inúmeros países com seus tratamentos
+            exclusivos e totalmente naturais.</p>
+        </header>
+        <div class="services__cards">
+          <div class="services__card">
+            <div class="services__card__icon icon-woman-hair"></div>
+            <h3 class="title">Terapia Capilar</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ab expedita quas deserunt nihil soluta excepturi molestiae, reiciendis possimus reprehenderit consequuntur sapiente accusamus, ullam ratione rerum dolorem quibusdam iure exercitationem.</p>
+          </div>
+          <div class="services__card">
+            <div class="services__card__icon icon-trim"></div>
+            <h3 class="title">Cortes</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt deserunt obcaecati at cupiditate sed minus laboriosam eum similique veritatis aut eligendi voluptate, ipsa est iusto quidem numquam non. Ipsa, repudiandae.</p>
+          </div>
+          <div class="services__card">
+            <div class="services__card__icon icon-cosmetic"></div>
+            <h3 class="title">Tratamentos</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quibusdam incidunt aspernatur tempora nobis officiis eum sequi nemo accusantium omnis consequatur ullam repellat doloremque temporibus labore, ab recusandae voluptatem aperiam!</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section></section>
   </main>
 </body>
