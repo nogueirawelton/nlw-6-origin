@@ -4,6 +4,9 @@ import initSwiper from './modules/initSwiper';
 import initScrollReveal from './modules/initScrollReveal';
 import BackToTopButton from './modules/BackToTopButton';
 import AddPageStatus from './modules/AddPageStatus';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import './styles/globals.scss';
 
 const menu = new Menu('#header nav', '.toggle');
