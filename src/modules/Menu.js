@@ -4,15 +4,20 @@ export default class Menu {
     this.menu = document.querySelector(menu);
     this.links = this.menu.querySelectorAll('a');
     this.handleClick = this.handleClick.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
   }
 
   handleClick() {
-    this.menu.classList.toggle('header__nav__menu--active');
+    this.menu.classList.toggle('show');
+  }
+
+  handleRemove() {
+    this.menu.classList.remove('show');
   }
 
   addLinksEvent() {
     this.links.forEach((link) => {
-      link.addEventListener('click', this.handleClick);
+      link.addEventListener('click', this.handleRemove);
     });
   }
 
