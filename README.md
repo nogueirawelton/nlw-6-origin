@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  NLW 6
+  NLW 6 - Origin
 </h1>
 
 <p align="center">
